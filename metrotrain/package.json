@@ -1,0 +1,47 @@
+{
+    "name": "metrotrain",
+    "enabled": true,
+    "trigger": {
+      "driven": "timeDriven",
+      "dataDriven": {
+        "tags": {}
+      },
+      "timeDriven": {
+        "mode": "boot",
+        "intervalSec": 1,
+        "cronJob": ""
+      }
+    },
+    "expose": {
+      "tags": [
+          {
+            "prvdName": "metrotrain",
+            "srcName": "sensor",
+            "tagName": "voltage",
+            "dataType": "double",
+            "dataSize": 1,
+            "access": "w" 
+          },
+          {
+            "prvdName": "metrotrain",
+            "srcName": "sensor",
+            "tagName": "current",
+            "dataType": "double",
+            "dataSize": 1,
+            "access": "w" 
+          },
+          {
+            "prvdName": "metrotrain",
+            "srcName": "sensor",
+            "tagName": "power",
+            "dataType": "boolean",
+            "dataSize": 1,
+            "access": "r" 
+          }
+      ]
+    },
+    "executable": {
+      "language": "python"
+    },
+    "params": {}
+  }
